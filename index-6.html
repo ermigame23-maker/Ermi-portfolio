@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b12" />
+  <meta name="description" content="Ermias Woretaw Asefa — aspiring mechanical engineer, student, and project team leader interested in engineering, innovation, and building useful things." />
+  <title>Ermias Woretaw Asefa | Engineering • Innovation • Future</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#080b12;--panel:#101622;--panel2:#0d121c;--text:#f4f7fb;--muted:#a3adbd;--line:rgba(255,255,255,.11);--accent:#73e0c1;--blue:#83a9ff;--max:1120px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 75% 5%,rgba(65,104,190,.17),transparent 34%),radial-gradient(ellipse at 10% 40%,rgba(59,193,158,.09),transparent 30%),var(--bg)}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(8,11,18,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.7px;font-size:1.12rem}
+    .brand span{color:var(--accent)}
+    .links{display:flex;align-items:center;gap:25px;color:#c4ccda;font-size:.9rem}
+    .links a:hover{color:var(--accent)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 17px;border-radius:12px;font-weight:700;font-size:.9rem;transition:.2s ease}
+    .nav-cta,.btn.primary{background:var(--accent);color:#07120f}
+    .nav-cta:hover,.btn.primary:hover{transform:translateY(-2px);filter:brightness(1.06)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:8px 11px;font-size:1.2rem}
+    .hero{padding:92px 0 80px;min-height:640px;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:58px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-size:.78rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;margin-bottom:24px}
+    .dot{height:8px;width:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 16px var(--accent)}
+    h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.12;letter-spacing:-1.2px}
+    h1{font-size:clamp(3rem,6.6vw,5.5rem);max-width:750px}
+    h1 em{font-style:normal;color:var(--accent)}
+    .hero p{font-size:1.1rem;color:var(--muted);max-width:630px;margin:25px 0 30px}
+    .actions{display:flex;gap:13px;flex-wrap:wrap}
+    .btn.secondary{border:1px solid var(--line);background:rgba(255,255,255,.035)}
+    .btn.secondary:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .quick-facts{display:flex;gap:25px;flex-wrap:wrap;margin-top:36px;color:var(--muted);font-size:.86rem}
+    .quick-facts strong{display:block;color:var(--text);font-size:1.05rem}
+    .orbit-card{position:relative;min-height:390px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.015));display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .orbit-card:before,.orbit-card:after{content:"";position:absolute;border:1px solid rgba(115,224,193,.23);border-radius:50%;width:290px;height:290px;transform:rotate(-25deg) scaleY(.62)}
+    .orbit-card:after{width:220px;height:220px;border-color:rgba(131,169,255,.35);transform:rotate(38deg) scaleY(.62)}
+    .core{height:148px;width:148px;border-radius:35px;display:grid;place-items:center;background:linear-gradient(145deg,#1b3c3a,#17213b);border:1px solid rgba(115,224,193,.45);box-shadow:0 0 70px rgba(115,224,193,.12);font-size:3.5rem;z-index:1}
+    .float-tag{position:absolute;padding:10px 13px;border:1px solid var(--line);border-radius:12px;background:#111925;color:#dce5f1;font-size:.8rem;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+    .tag1{top:48px;left:25px}.tag2{right:20px;top:115px}.tag3{bottom:47px;left:34px}.tag4{right:22px;bottom:55px}
+    section{padding:80px 0}
+    .section-top{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:35px}
+    .kicker{color:var(--accent);font-size:.77rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:12px}
+    h2{font-size:clamp(2rem,4vw,3.2rem)}
+    .section-top p{max-width:470px;color:var(--muted)}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}
+    .card{border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));border-radius:22px;padding:28px}
+    .quote-card{display:flex;flex-direction:column;justify-content:space-between;min-height:270px;background:linear-gradient(145deg,rgba(115,224,193,.11),rgba(131,169,255,.06))}
+    .quote-mark{font-family:Georgia,serif;font-size:4rem;color:var(--accent);line-height:.8}
+    .quote-card blockquote{font-family:"Space Grotesk",sans-serif;font-size:1.55rem;line-height:1.35;margin:20px 0}
+    .quote-card small{color:var(--muted)}
+    .about-copy p{color:var(--muted);margin-bottom:15px}
+    .chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+    .chip{border:1px solid var(--line);border-radius:100px;padding:7px 12px;font-size:.82rem;color:#d7e1ee;background:rgba(255,255,255,.025)}
+    .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+    .feature{min-height:240px}
+    .icon{height:46px;width:46px;border-radius:14px;display:grid;place-items:center;background:rgba(115,224,193,.1);color:var(--accent);font-size:1.35rem;margin-bottom:24px}
+    .feature h3,.project h3{font-size:1.25rem;margin-bottom:12px;letter-spacing:-.4px}
+    .feature p,.project p{color:var(--muted);font-size:.94rem}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .project{overflow:hidden;padding:0}
+    .project-art{height:175px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 45%,rgba(115,224,193,.18),transparent 48%),linear-gradient(135deg,#172238,#0c121b)}
+    .project-art .symbol{font-size:3.4rem;z-index:1}
+    .project-art:before,.project-art:after{content:"";position:absolute;width:210px;height:110px;border:1px solid rgba(115,224,193,.24);border-radius:50%;transform:rotate(-20deg)}
+    .project-art:after{transform:rotate(40deg);border-color:rgba(131,169,255,.27)}
+    .project-body{padding:25px}
+    .meta{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0}
+    .meta span{font-size:.74rem;color:var(--accent);border:1px solid rgba(115,224,193,.22);padding:5px 9px;border-radius:100px}
+    .text-link{color:var(--accent);font-weight:700;font-size:.9rem;display:inline-flex;gap:8px;align-items:center}
+    .timeline{border-left:1px solid rgba(115,224,193,.35);margin:12px 0 0 8px;padding-left:27px;display:grid;gap:24px}
+    .timeline-item{position:relative}
+    .timeline-item:before{content:"";position:absolute;left:-33px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px rgba(115,224,193,.09)}
+    .timeline-item h3{font-size:1.1rem;letter-spacing:-.3px;margin-bottom:7px}
+    .timeline-item p{color:var(--muted);font-size:.94rem}
+    .contact{padding:48px;border-radius:28px;border:1px solid rgba(115,224,193,.25);background:radial-gradient(ellipse at 100% 0%,rgba(115,224,193,.11),transparent 40%),var(--panel2);display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .contact p{color:var(--muted);max-width:590px;margin-top:14px}
+    footer{padding:30px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:35px}.hero{padding-top:70px}.orbit-card{min-height:310px}.about-grid{grid-template-columns:1fr}.cards-3{grid-template-columns:1fr 1fr}.section-top{display:block}.section-top p{margin-top:15px}.contact{display:block}.contact .btn{margin-top:22px}}
+    @media(max-width:600px){.wrap{width:min(100% - 30px,var(--max))}.nav-inner{height:67px}.menu{display:block}.links{display:none;position:absolute;top:66px;left:0;right:0;padding:20px;background:#0b1019;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.links.open{display:flex}.nav-cta{display:none}.hero{padding:58px 0}.hero p{font-size:1rem}.quick-facts{gap:17px}.orbit-card{min-height:275px}.core{width:110px;height:110px;font-size:2.7rem}.orbit-card:before{width:230px;height:230px}.orbit-card:after{width:175px;height:175px}.tag1{top:25px;left:12px}.tag2{right:10px;top:76px}.tag3{bottom:25px;left:12px}.tag4{right:10px;bottom:27px}.float-tag{font-size:.7rem;padding:8px 9px}section{padding:60px 0}.cards-3,.project-grid{grid-template-columns:1fr}.card{padding:23px}.contact{padding:28px}.footer-inner{display:block}.footer-inner span{display:block;margin-top:8px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home">E<span>.</span>W. ASEFA</a>
+      <button class="menu" id="menuButton" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#focus">My focus</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Let's connect ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Student • Builder • Future Engineer</div>
+          <h1>Curious mind.<br>Builder's <em>spirit.</em><br>Engineer in progress.</h1>
+          <p>I'm Ermias Woretaw Asefa — a student at Sheger Institute of Technology with a growing interest in mechanical engineering, practical problem-solving, and ideas that can make life better.</p>
+          <div class="actions">
+            <a class="btn primary" href="#projects">Explore my work <span>↘</span></a>
+            <a class="btn secondary" href="#about">Get to know me</a>
+          </div>
+          <div class="quick-facts">
+            <div><strong>SIT</strong>Current learning journey</div>
+            <div><strong>Engineering</strong>My direction</div>
+            <div><strong>Build & improve</strong>My mindset</div>
+          </div>
+        </div>
+        <div class="orbit-card" aria-label="Abstract engineering-inspired illustration">
+          <span class="float-tag tag1">⚙ Problem solving</span>
+          <span class="float-tag tag2">✦ Innovation</span>
+          <span class="float-tag tag3">⌁ Curiosity</span>
+          <span class="float-tag tag4">↗ Future focused</span>
+          <div class="core">⚙</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-top reveal"><div><div class="kicker">01 / A little about me</div><h2>More than a student ID.</h2></div><p>I'm interested in how things work — and how thoughtful design can turn an idea into something useful.</p></div>
+        <div class="about-grid">
+          <div class="card quote-card reveal"><div class="quote-mark">“</div><blockquote>I don't want to only understand how the world works. I want to help build what comes next.</blockquote><small>My mindset • Always learning</small></div>
+          <div class="card about-copy reveal">
+            <p>I'm building my foundation in technology and engineering, with a particular ambition to grow into mechanical engineering. I enjoy thinking about systems, designing solutions, and exploring how science can be applied to real challenges.</p>
+            <p>I'm also learning to lead, collaborate, and keep moving when a project becomes difficult. For me, progress comes from curiosity, consistent work, and the courage to try.</p>
+            <div class="chips"><span class="chip">Mechanical engineering</span><span class="chip">Creative problem-solving</span><span class="chip">Team leadership</span><span class="chip">STEM projects</span><span class="chip">Continuous learning</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus">
+      <div class="wrap">
+        <div class="section-top reveal"><div><div class="kicker">02 / What drives me</div><h2>Interests I'm growing into.</h2></div><p>These are the areas I want to explore more deeply as I learn and gain hands-on experience.</p></div>
+        <div class="cards-3">
+          <article class="card feature reveal"><div class="icon">⚙</div><h3>Mechanical engineering</h3><p>Machines, mechanisms, materials, energy, and the design principles behind things that move and work.</p></article>
+          <article class="card feature reveal"><div class="icon">⌘</div><h3>Design & innovation</h3><p>Turning a problem into a clear idea, testing possibilities, and improving a solution step by step.</p></article>
+          <article class="card feature reveal"><div class="icon">✦</div><h3>Engineering for people</h3><p>Exploring practical technology that can solve real problems and create value for communities.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-top reveal"><div><div class="kicker">03 / Selected work</div><h2>Ideas put into action.</h2></div><p>Projects are where learning meets real constraints, teamwork, and imagination.</p></div>
+        <div class="project-grid">
+          <article class="card project reveal">
+            <div class="project-art"><div class="symbol">🚀</div></div>
+            <div class="project-body"><div class="kicker">Space design • Team project</div><h3>GFSSM — Space City Concept</h3><p>Team leader for a concept exploring a human-supporting space city near Mars. The proposal considered interconnected zones such as power, agriculture, residential areas, water management, transportation, automation, and airlock systems.</p><div class="meta"><span>Team leadership</span><span>Systems thinking</span><span>Future habitats</span></div><p>The project received an excellent response and recognition in the Ethiopian group results, according to the project feedback.</p></div>
+          </article>
+          <article class="card project reveal">
+            <div class="project-art"><div class="symbol">⌁</div></div>
+            <div class="project-body"><div class="kicker">Early invention • Assistive idea</div><h3>Obstacle-Alert Warning Device</h3><p>An early school project inspired by the challenge of helping visually impaired people detect obstacles. I explored a warning-bell device using discarded materials and electronic scraps.</p><div class="meta"><span>Prototyping</span><span>Assistive technology</span><span>Resourcefulness</span></div><p>It helped strengthen my interest in building useful things from the resources available to me.</p></div>
+          </article>
+        </div>
+        <p style="color:var(--muted);font-size:.83rem;margin-top:16px">Project descriptions can be expanded with photos, certificates, presentation slides, and technical details as you add them.</p>
+      </div>
+    </section>
+
+    <section id="journey">
+      <div class="wrap">
+        <div class="section-top reveal"><div><div class="kicker">04 / My journey</div><h2>Learning, leading, building.</h2></div><p>Every stage adds a new skill, a new question, and a better way to approach the next challenge.</p></div>
+        <div class="card reveal">
+          <div class="timeline">
+            <div class="timeline-item"><h3>Today — Sheger Institute of Technology</h3><p>Building my college foundation and preparing for a future in engineering, with mechanical engineering as my main ambition.</p></div>
+            <div class="timeline-item"><h3>STEM project leadership</h3><p>Worked as a team leader on the GFSSM Space City concept, helping coordinate a broad, systems-based design idea.</p></div>
+            <div class="timeline-item"><h3>First steps in invention</h3><p>Explored an obstacle-warning idea for visually impaired people using available and recycled materials — an early lesson in resourcefulness.</p></div>
+            <div class="timeline-item"><h3>What's next</h3><p>Deepen my technical skills, build more practical projects, document what I learn, and work with people who enjoy solving meaningful problems.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact reveal">
+          <div><div class="kicker">05 / Let's connect</div><h2>Have an idea worth building?</h2><p>I'm open to connecting with students, mentors, engineers, and people interested in technology, innovation, and collaborative projects.</p></div>
+          <a class="btn primary" href="https://github.com/ermigame23-maker" target="_blank" rel="noopener noreferrer">Find me on GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Ermias Woretaw Asefa. Built with curiosity.</span><span>Designed to keep growing — just like the journey.</span><a href="#home">Back to top ↑</a></div></footer>
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const navLinks = document.getElementById('navLinks');
+    menuButton.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.textContent = open ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
